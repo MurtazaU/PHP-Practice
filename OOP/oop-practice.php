@@ -1,36 +1,30 @@
 <?php
 
-Class Suspect{
-    public $suspect__name;
-    public $suspect__address;
-    public $suspect__race;
-    public $suspect__fireArm;
+class Student{
+    public $student__name;
+    public $student__class;
+    public $student__marks;
 
 
-    function __contain($name, $address, $race, $fireArm){
-        $this->suspect__name = $name;
-        $this->suspect__address = $address; 
-        $this->suspect__race = $race; 
-        $this->suspect__fireArm = $fireArm; 
+    function __construct($name, $class, $marks){
+        $this->student__name = $name;
+        $this->student__class = $class;
+        $this->student__marks = $marks;
 
-        echo $this->suspect__name;
     }
 
-
-    function get__details(){
-        echo $this->suspect__name . '<br/>';
-        echo $this->suspect__address . '<br/>';
-        echo $this->suspect__race . '<br/>';
-        if($this->suspect__fireArm == true){
-            echo 'Be Alert, The suspect is armed';
-        } else{
-            echo 'The suspect does not seem to be armed';
-        }
+    function getDetails(){
+        echo $this->student__name . '<br/>';
+        echo $this->student__class . '<br/>';
+        echo $this->student__marks . '<br/>';
     }
-
 }
 
 
-$sus__1 = new Suspect('Ahmed', 'A-135, Block-5, Gulzar-e-Hijri', 'Brown', true);
+$student__1 = new Student('Ahmed', 8, 86);
+$student__1->getDetails();
+
+
+
 
 ?>
