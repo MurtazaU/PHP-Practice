@@ -55,7 +55,7 @@ if(isset($_REQUEST['login'])){
         <?php
             if(isset($_REQUEST['login'])){
                 if($count > 0){
-                    header('location:./home.php');
+                    header('location:./admin.php');
                 } else{
                     echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Invalid credentials</strong>
