@@ -4,10 +4,10 @@ include('./dbconnection.php');
 
     $sql = $con-> prepare('select * from accountdetails');
     $sql->execute();
-    $record = $sql->fetchALL(PDO::is_object);
+    $record = $sql->fetchALL(PDO::OBJ);
 
 
-
+echo 'Yay';
 
 
 ?>
